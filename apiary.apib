@@ -24,6 +24,19 @@ API interna para los clientes del juego Los 8 Escalones.
             "mandatory": "false"
         }
 
+## Updates [/v2/updates]
+
+### Actualizar el usuario a la v2 [POST /v2/updates/toV2?user_id={user_id}]
+
++ Parameters
+    + user_id (required, number) - ID del usuario
+
++ Response 200
+
+        {
+            "success": true
+        }
+
 ## Questions [/v2/questions]
 
 ### Bundle de preguntas [POST /v2/questions/bundle?user_id={user_id}]
