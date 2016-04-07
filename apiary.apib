@@ -7,7 +7,7 @@ API interna para los clientes del juego Los 8 Escalones.
 
 ## Info [/v2/info]
 
-### Versiones de cliente & servidor [GET /v2/info/version?p={platform_id}]
+### Versiones de cliente & servidor [POST /v2/info/version?p={platform_id}]
 
 + Parameters
     + platform_id (required, enum[number]) - ID de la plataforma del client
@@ -24,9 +24,9 @@ API interna para los clientes del juego Los 8 Escalones.
             "mandatory": "false"
         }
 
+## Questions [/v2/questions]
 
-
-### Create a New Question [POST]
+### Crear pregunta del usuario [POST /v2/questions/]
 
 You may create your own question using this action. It takes a JSON
 object containing a question and a collection of answers in the
