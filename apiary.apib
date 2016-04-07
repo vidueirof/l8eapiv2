@@ -26,48 +26,15 @@ API interna para los clientes del juego Los 8 Escalones.
 
 ## Questions [/v2/questions]
 
-### Crear pregunta del usuario [POST /v2/questions/]
+### Bundle de preguntas [POST /v2/questions/bundle?user_id={user_id}]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
++ Parameters
+    + user_id (required, number) - ID del usuario
 
-+ Request (application/json)
++ Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "clientVersion": "1.4.0",
+            "serverVersion": "2.0.0",
+            "mandatory": "false"
         }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
